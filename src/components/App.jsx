@@ -12,7 +12,10 @@ function App() {
     }
 
     function addItem() {
-        if(!inputText) return;  // removed empty todos!!
+        if(!inputText){
+            alert('Input Field is required!');
+            return;
+        }
         setItems(prevItems => {
             return [...prevItems, inputText];
         });
