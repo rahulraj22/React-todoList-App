@@ -12,6 +12,7 @@ function App() {
     }
 
     function addItem() {
+        if(!inputText) return;  // removed empty todos!!
         setItems(prevItems => {
             return [...prevItems, inputText];
         });
